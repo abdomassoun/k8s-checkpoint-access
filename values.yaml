@@ -1,0 +1,12 @@
+namespace: kube-system
+serviceAccount:
+    name: checkpoint-sa
+rbac:
+    roleName: checkpoint-role
+    roleBinding: checkpoint-rolebinding
+tokenSecret:
+    name: checkpoint-sa-token
+ingress:
+    enabled: false
+
+
