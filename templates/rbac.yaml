@@ -6,8 +6,9 @@ rules:
  - apiGroups: [""]
    resources: ["pods"]
    verbs: ["get", "list"]
- - nonResourceURLs: ["/checkpoint/*"]
-   verbs: ["post"]
+ - apiGroups: [""]
+   resources: ["nodes/checkpoint"]
+   verbs: ["create"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
